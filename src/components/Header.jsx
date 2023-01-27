@@ -8,6 +8,7 @@ import logo from '@logos/logo_yard_sale.svg';
 import AppContext from '@context/AppContext';
 import shoppingCart from '@icons/icon_shopping_cart.svg';
 import styles from '@styles/Header.module.scss';
+import Link from 'next/link';
 
 const Header = () => {
   const [toggle, setToggle] = useState(false);
@@ -22,25 +23,27 @@ const Header = () => {
     <nav className={styles.Nav}>
       <Image src={menu} alt="menu" className={styles.menu} />
       <div className={styles['navbar-left']}>
-        <Image src={logo} alt="logo" className={styles['nav-logo']} />
+        <Link href={'/'}>
+          <Image src={logo} alt="logo" className={styles['nav-logo']} />
+        </Link>
         <ul>
           <li>
-            <a href="/">All</a>
+            <Link href="/">All</Link>
           </li>
           <li>
-            <a href="/">Clothes</a>
+            <Link href="/">Clothes</Link>
           </li>
           <li>
-            <a href="/">Electronics</a>
+            <Link href="/">Electronics</Link>
           </li>
           <li>
-            <a href="/">Furnitures</a>
+            <Link href="/">Furnitures</Link>
           </li>
           <li>
-            <a href="/">Toys</a>
+            <Link href="/">Toys</Link>
           </li>
           <li>
-            <a href="/">Others</a>
+            <Link href="/">Others</Link>
           </li>
         </ul>
       </div>
