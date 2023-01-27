@@ -1,21 +1,25 @@
 /** @type {import('next').NextConfig} */
+
 const nextConfig = {
   reactStrictMode: true,
-  swcMinify: true,
-  env: {
-    customKey: 'customValue',
+  images: {
+    domains: ['api.lorem.space', 'placeimg.com', 'wixmp.com', 'romapy'],
   },
-  basePath: '/dist',
-  compress: true,
-  async redirects() {
-    return [
-      {
-        source: '/hola',
-        destination: '/hi',
-        permanent: true,
-      },
-    ];
-  },
+  // swcMinify: true,
+  // env: {
+  //   customKey: 'customValue'
+  // },
+  // // basePath: '/dist',
+  // compress: true,
+  // async redirect(){
+  //   return [
+  //     {
+  //       source: '/hola',
+  //       destination: 'https://gndx.dev/',
+  //       permanent: true
+  //     }
+  //   ]
+  // }
 };
 
 module.exports = nextConfig;
